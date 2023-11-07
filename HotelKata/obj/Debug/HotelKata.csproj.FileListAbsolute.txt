@@ -1,0 +1,9 @@
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\bin\Debug\HotelKata.dll
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\bin\Debug\HotelKata.pdb
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\bin\Debug\nunit.framework.dll
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\bin\Debug\nunit.framework.xml
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\obj\Debug\HotelKata.csproj.AssemblyReference.cache
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\obj\Debug\HotelKata.csproj.CoreCompileInputs.cache
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\obj\Debug\HotelKata.csproj.CopyComplete
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\obj\Debug\HotelKata.dll
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\obj\Debug\HotelKata.pdb
