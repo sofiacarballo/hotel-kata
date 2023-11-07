@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HotelKata
+namespace HotelKata.Services
 {
     public class HotelService
     {

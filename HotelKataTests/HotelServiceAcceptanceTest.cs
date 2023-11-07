@@ -1,6 +1,8 @@
-﻿using NUnit.Framework;
+﻿using HotelKata;
+using HotelKata.Services;
+using NUnit.Framework;
 
-namespace HotelKata
+namespace HotelKataTests
 {
     [TestFixture]
     public class HotelServiceAcceptanceTest
