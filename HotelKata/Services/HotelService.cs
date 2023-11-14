@@ -2,11 +2,17 @@
 
 namespace HotelKata.Services
 {
-    public class HotelService
+    public class HotelService : IHotelService
     {
+        private IHotelRepository HotelRepository;
+        public HotelService(IHotelRepository hotelRepository)
+        {
+            HotelRepository = hotelRepository;
+        }
+
         public void AddHotel(Hotel hotel)
         {
-            throw new NotImplementedException();
+            HotelRepository.Add(hotel);
         }
     
         public void SetRoom(int hotelId, int number, RoomType roomType)
@@ -14,9 +20,6 @@ namespace HotelKata.Services
             throw new NotImplementedException();
         }
             
-        public string FindHotelBy(int hotelId)
-        {
-            throw new NotImplementedException();
-        }
+        public Hotel FindHotelBy(int hotelId) => HotelRepository.GetById(hotelId);
     }
 }

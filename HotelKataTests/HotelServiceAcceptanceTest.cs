@@ -25,7 +25,9 @@ namespace HotelKataTests
             const int hotelId = 1;
             
             var hotel = new Hotel(hotelId, "Chacana Out");
-            var hotelService = new HotelService();
+            IHotelRepository hotelRepository = new HotelRepository();
+            
+            var hotelService = new HotelService(hotelRepository);
             
             hotelService.AddHotel(hotel);
             hotelService.SetRoom(hotelId, 5, RoomType.Standard);

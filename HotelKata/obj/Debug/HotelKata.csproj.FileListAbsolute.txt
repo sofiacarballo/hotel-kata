@@ -7,3 +7,11 @@ C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\obj\Debug\HotelKata.cs
 C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\obj\Debug\HotelKata.csproj.CopyComplete
 C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\obj\Debug\HotelKata.dll
 C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\obj\Debug\HotelKata.pdb
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\bin\Debug\Castle.Core.dll
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\bin\Debug\Moq.dll
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\bin\Debug\Castle.Core.xml
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\bin\Debug\Moq.xml
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Sofia\Desktop\Projects\katas\HotelKata\HotelKata\bin\Debug\System.Threading.Tasks.Extensions.xml
