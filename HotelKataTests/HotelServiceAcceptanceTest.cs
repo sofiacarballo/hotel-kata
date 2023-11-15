@@ -1,4 +1,5 @@
 ﻿using HotelKata;
+using HotelKata.Repositories;
 using HotelKata.Services;
 using NUnit.Framework;
 
@@ -26,8 +27,9 @@ namespace HotelKataTests
             
             var hotel = new Hotel(hotelId, "Chacana Out");
             IHotelRepository hotelRepository = new HotelRepository();
+            IAvailabilityService hotelAvailabilityService = new AvailabilityService();
             
-            var hotelService = new HotelService(hotelRepository);
+            var hotelService = new HotelService(hotelRepository, hotelAvailabilityService);
             
             hotelService.AddHotel(hotel);
             hotelService.SetRoom(hotelId, 5, RoomType.Standard);

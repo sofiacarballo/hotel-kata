@@ -58,7 +58,6 @@
     <ItemGroup>
         <Compile Include="HotelServiceAcceptanceTest.cs" />
         <Compile Include="HotelServiceShould.cs" />
-        <Compile Include="Tests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>

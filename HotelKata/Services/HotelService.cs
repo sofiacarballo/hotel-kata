@@ -1,13 +1,18 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
+using HotelKata.Repositories;
 
 namespace HotelKata.Services
 {
+    [SuppressMessage("ReSharper", "InconsistentNaming")]
     public class HotelService : IHotelService
     {
-        private IHotelRepository HotelRepository;
-        public HotelService(IHotelRepository hotelRepository)
+        private readonly IHotelRepository HotelRepository;
+        private readonly IAvailabilityService AvailabilityService;
+        public HotelService(IHotelRepository hotelRepository, IAvailabilityService availabilityService)
         {
             HotelRepository = hotelRepository;
+            AvailabilityService = availabilityService;
         }
 
         public void AddHotel(Hotel hotel)
@@ -15,9 +20,9 @@ namespace HotelKata.Services
             HotelRepository.Add(hotel);
         }
     
-        public void SetRoom(int hotelId, int number, RoomType roomType)
+        public void SetRoom(int hotelId, int numberOfRooms, RoomType roomType)
         {
-            throw new NotImplementedException();
+            AvailabilityService.AddRoomAvailability(hotelId, numberOfRooms, roomType);
         }
             
         public Hotel FindHotelBy(int hotelId) => HotelRepository.GetById(hotelId);

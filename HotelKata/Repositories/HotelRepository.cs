@@ -1,4 +1,4 @@
-﻿namespace HotelKata
+﻿namespace HotelKata.Repositories
 {
     public class HotelRepository : IHotelRepository
     {
