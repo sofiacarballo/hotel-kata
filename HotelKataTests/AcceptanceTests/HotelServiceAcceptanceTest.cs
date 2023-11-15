@@ -3,7 +3,7 @@ using HotelKata.Repositories;
 using HotelKata.Services;
 using NUnit.Framework;
 
-namespace HotelKataTests
+namespace HotelKataTests.AcceptanceTests
 {
     [TestFixture]
     public class HotelServiceAcceptanceTest

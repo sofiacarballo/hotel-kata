@@ -56,9 +56,9 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="HotelServiceAcceptanceTest.cs" />
-        <Compile Include="HotelServiceShould.cs" />
+        <Compile Include="AcceptanceTests\HotelServiceAcceptanceTest.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Services\HotelServiceShould.cs" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\HotelKata\HotelKata.csproj">
@@ -68,6 +68,9 @@
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Repositories\" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

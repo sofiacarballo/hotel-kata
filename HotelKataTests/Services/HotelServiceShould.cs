@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using HotelKata;
 using HotelKata.Exceptions;
 using HotelKata.Repositories;
@@ -7,7 +6,7 @@ using HotelKata.Services;
 using Moq;
 using NUnit.Framework;
 
-namespace HotelKataTests
+namespace HotelKataTests.Services
 {
     [SuppressMessage("ReSharper", "InconsistentNaming")]
     public class HotelServiceShould
