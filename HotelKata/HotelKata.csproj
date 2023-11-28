@@ -56,6 +56,7 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Availability.cs" />
         <Compile Include="Exceptions\HotelNotFoundException.cs" />
         <Compile Include="Hotel.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +64,7 @@
         <Compile Include="Repositories\IHotelRepository.cs" />
         <Compile Include="RoomType.cs" />
         <Compile Include="Services\AvailabilityService.cs" />
+        <Compile Include="Services\HotelAvailability.cs" />
         <Compile Include="Services\HotelService.cs" />
         <Compile Include="Services\IAvailabilityService.cs" />
         <Compile Include="Services\IHotelService.cs" />

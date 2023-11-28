@@ -2,7 +2,7 @@
 {
     public class Hotel
     {
-        private int Id;
+        public int Id;
         private string Name;
 
         public Hotel(int id, string name)

@@ -2,6 +2,7 @@
 {
      public interface IAvailabilityService
     {
-        void AddRoomAvailability(int hotelId, int numberOfRooms, RoomType roomType);
+        void AddRoomAvailability(Availability roomAvailability);
+        HotelAvailability GetAvailability(Hotel hotel);
     }
 }

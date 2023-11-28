@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using HotelKata.Repositories;
 
 namespace HotelKata.Services
@@ -22,9 +21,15 @@ namespace HotelKata.Services
     
         public void SetRoom(int hotelId, int numberOfRooms, RoomType roomType)
         {
-            AvailabilityService.AddRoomAvailability(hotelId, numberOfRooms, roomType);
+            var roomAvailability = new Availability(hotelId, numberOfRooms, roomType);
+            AvailabilityService.AddRoomAvailability(roomAvailability);
         }
             
-        public Hotel FindHotelBy(int hotelId) => HotelRepository.GetById(hotelId);
+        public HotelAvailability FindHotelBy(int hotelId)
+        {
+            var hotel = HotelRepository.GetById(hotelId);
+            
+            return AvailabilityService.GetAvailability(hotel);
+        }
     }
 }

@@ -35,9 +35,10 @@ namespace HotelKataTests.AcceptanceTests
             hotelService.SetRoom(hotelId, 5, RoomType.Standard);
             hotelService.SetRoom(hotelId, 10, RoomType.Double);
             hotelService.SetRoom(hotelId, 2, RoomType.Familiar);
-            
-            var result = hotelService.FindHotelBy(hotelId);
-                
+
+            var expectedHotel = hotelService.FindHotelBy(hotelId);
+            var result = expectedHotel.Print();
+
             Assert.Equals(result, hotelAvailability);
         }
     }

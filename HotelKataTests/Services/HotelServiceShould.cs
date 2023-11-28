@@ -14,6 +14,7 @@ namespace HotelKataTests.Services
         private Hotel hotel;
         private Mock<IHotelRepository> mockedHotelRepository;
         private Mock<IAvailabilityService> mockedAvailabilityService;
+        private IAvailabilityService availabilityService;
         private HotelService hotelService;
         private const int HotelId = 1;
         
@@ -21,6 +22,7 @@ namespace HotelKataTests.Services
         public void Setup()
         {
             hotel = new Hotel(HotelId, "Chacana Out");
+            availabilityService = new AvailabilityService();
             mockedHotelRepository = new Mock<IHotelRepository>();
             mockedAvailabilityService = new Mock<IAvailabilityService>();  
             hotelService = new HotelService(mockedHotelRepository.Object, mockedAvailabilityService.Object);
@@ -37,12 +39,25 @@ namespace HotelKataTests.Services
         [Test]
         public void FindHotelById()
         {
+            var hotelAvailability = new HotelAvailability(hotel);
+            
             mockedHotelRepository.Setup(repository => repository.GetById(HotelId)).Returns(hotel);
+            mockedAvailabilityService.Setup(availabilityService =>
+                availabilityService.GetAvailability(hotel)).Returns(hotelAvailability);
 
             var expectedHotel = hotelService.FindHotelBy(HotelId);
-            
+
             mockedHotelRepository.Verify(hotelRepository => hotelRepository.GetById(HotelId), Times.Once);
-            Assert.AreEqual(expectedHotel, hotel);
+            mockedAvailabilityService.Verify(availabilityService => availabilityService.GetAvailability(hotel), Times.Once);
+            Assert.AreEqual(expectedHotel, hotelAvailability);
+        }
+
+        [Test]
+        public void ReturnHotelAndAvailability()
+        {
+            var hotelAvailability = new HotelAvailability(hotel);
+
+            mockedAvailabilityService.Setup(x => x.GetAvailability(hotel)).Returns(hotelAvailability);
         }
 
         [Test]
@@ -59,8 +74,9 @@ namespace HotelKataTests.Services
             const int numberOfRooms = 5;
             
             hotelService.SetRoom(HotelId, numberOfRooms, RoomType.Standard);
+            var expectedAvailability = new Availability(HotelId, numberOfRooms, RoomType.Standard);
 
-            mockedAvailabilityService.Verify(availabilityService => availabilityService.AddRoomAvailability(HotelId, numberOfRooms, RoomType.Standard), Times.Once);
+            mockedAvailabilityService.Verify(availabilityService => availabilityService.AddRoomAvailability(expectedAvailability), Times.Once);
         }
     }
 }
